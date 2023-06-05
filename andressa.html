@@ -1,0 +1,927 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Andressa</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, ;
+      background-color: #f5f5f5;
+    }
+
+    .texto {
+
+      padding-left: 15px;
+    }
+
+    header {
+      background-color: #f58f9a;
+      color: #e9e9e9;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    nav {
+      background-color: #fcd7da;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav a {
+      color: #fcd7da;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+      background-color: #e4b8b8e8;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .projeto {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .projeto img {
+
+      width: 450px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaAed_fAZZm3KmaTb6egrI99_h5y4wNSppWQ&usqp=CAU') fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .parallax {
+      width: 10px;
+      height: 10px;
+      background: url('data:image/png;base64,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');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+
+    .projeto h3 {
+      margin-top: 0;
+
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    .texto {
+      width: 40%;
+      /* Define a largura do texto */
+
+    }
+
+    figcaption {
+      text-align: right;
+    }
+
+    .container-image {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+<body class="p-3 m-0 border-0 bd-example">
+
+
+  <body>
+    <header>
+      <h1>Nossa história </h1>
+    </header>
+    <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #f7bdc2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Introdução</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#nossos momentos juntos">Nossos momentos são unicos </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Nossa primeira foto">Nosso primeiro momento juntos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#foto que mais gosto">Foto que mais gosto </a>
+            <li class="nav-item">
+              <a class="nav-link" href="#nossas fotos">Nossas fotos </a>
+              <li class="nav-item">
+
+            </li>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="introdução">
+      <h1 align="center">Introdução</h1>
+      <p style="font-size: 20px;">Meu amor, hoje é um dia muito especial, pois é o seu aniversário! Eu quero lhe desejar
+        muitas felicidades,
+        saúde, amor, sucesso e muitos anos de vida ao meu lado. Você é uma pessoa incrível e eu sou muito grato por
+        tê-la na minha vida. Que o seu dia seja repleto de sorrisos, abraços, carinho e muita comemoração. Eu amo você e
+        estou ansioso para celebrar muitos outros aniversários juntos. Parabéns, minha querida!</p>
+
+      <p style="font-size: 20px;">Hoje eu escutei algo muito interessante e verdadeiro: que a cada "sim" que Deus nos
+        dá, há centenas de "nãos"
+        anteriores. E você, para mim, foi um desses "sims". Foram as experiências negativas que eu tive que me levaram
+        até você, e eu sempre agradecerei a Deus por tê-la ao meu lado. </p>
+    </section>
+    <section id="nossos momentos juntos">
+      <h2 align="center">Nossos momentos são unicos</h2>
+      <p style="font-size: 20px;"> Andressa, nossos momentos juntos são verdadeiramente únicos e inesquecíveis. Cada
+        instante ao seu lado é um
+        tesouro precioso que guardo em meu coração. Em cada riso compartilhado, em cada abraço apertado, em cada
+        conversa sincera, eu sinto a magia de uma conexão verdadeira. Nossas vivências são como pinceladas coloridas que
+        preenchem a tela da nossa história de amor. Seja nos momentos de alegria intensa ou nos desafios que enfrentamos
+        juntos, a força do nosso amor nos fortalece e nos faz superar qualquer obstáculo. Não importa onde estejamos ou
+        o que façamos, cada instante ao seu lado é uma experiência preciosa que enriquece minha vida de maneiras
+        indescritíveis. Sei que estamos construindo uma história única e especial, cheia de lembranças que iremos
+        guardar para sempre. Me sinto abençoado por ter você ao meu lado, compartilhando esses momentos mágicos. E que a
+        nossa jornada continue sendo repleta de momentos únicos, onde o amor e a felicidade sempre prevalecem. Te amo
+        além das palavras, Andressa.</p>
+
+    </section>
+    <section id="Nossa primeira foto">
+      <h2 align="center">Nossa primeira foto<p>
+        <div class="container-image">
+          <img src="imagem/primeira foto.jpg" class="center">
+          <h6 class="textofoto">
+            <p>
+              <li style="font-size: 20px;" align="left">Para a mulher que ilumina cada canto do meu coração, Andressa. É
+                impossível
+                colocar em palavras o quanto te amo. Cada momento ao seu lado é uma confirmação do quanto você é
+                especial para mim. Seu sorriso encantador derrete meu mundo e seu abraço é o meu porto seguro. A cada
+                dia, meu amor por você cresce mais e mais, transbordando em gestos de carinho e admiração. Você é minha
+                parceira, minha melhor amiga e o grande amor da minha vida. Que este sentimento que nos une seja eterno,
+                pois não consigo imaginar minha vida sem você ao meu lado. Meu amor por você é incondicional e
+                verdadeiro. Te amo além das palavras.</li>
+            <p></p>
+            <li style="font-size: 20px;" align="left">Andressa, passar o tempo com você é simplesmente incrível! Cada
+              momento que compartilhamos é muito especial e eu valorizo demais esses instantes. A gente se diverte,
+              conversa de forma leve e curte as coisas simples da vida de um jeito maravilhoso. Ver o seu sorriso é algo
+              que enche meu coração de alegria, e abraçar você me faz sentir uma conexão única. Quando estamos juntos,
+              tudo parece se encaixar perfeitamente, e não há lugar onde eu prefira estar do que ao seu lado. Passar o
+              tempo com você renova minhas energias e me inspira. Sou imensamente grato por construir memórias incríveis
+              ao seu lado e por cultivar um amor que cresce a cada dia. Vamos continuar aproveitando cada momento
+              juntos, desfrutando da companhia um do outro e construindo uma história cheia de felicidade. É um
+              privilégio estar com você, meu amor.</li>
+
+            </p>
+          </h6>
+        </div>
+    </section>
+    </section>
+    <section id="foto que mais gosto">
+      <h2 align="center">Foto que mais gosto<p></p>
+        <div class="container-image">
+
+          <img src="imagem/noiva 18.jpg" class="center" width="800" height="650">
+          <h6 class="textofoto">
+            <p>
+              <li style="font-size: 20px;" align="left">
+                Andressa, meu amor, desde o primeiro momento em que te vi, fiquei completamente encantado pela sua
+                beleza única. Você é a definição de uma verdadeira princesa em minha vida. Seus olhos brilham como
+                estrelas, refletindo toda a pureza e doçura que habitam em seu coração. Cada traço do seu rosto é uma
+                obra-prima esculpida pela perfeição. Sua presença ilumina qualquer ambiente e faz com que todos se
+                rendam à sua graça e elegância. O modo como você caminha, fala e sorri transmite uma delicadeza que me
+                cativa a cada instante. Em meus olhos, você é a personificação da beleza em sua forma mais pura. Eu me
+                sinto o homem mais sortudo do mundo por ter ao meu lado alguém tão linda e especial como você, meu amor,
+                minha princesa. Que nosso amor seja um conto de fadas que nunca acaba, onde cada capítulo é repleto de
+                amor, admiração e cumplicidade. Seu encanto é indescritível, e meu coração se enche de gratidão por ter
+                você como minha companheira de vida. Te amo além das palavras, meu amor, minha princesa Andressa.</li>
+                <P></P>
+              <li style="font-size: 20px;" align="left">
+                Minha amada, quando vejo essa foto vestida de noiva, meu coração transborda de amor e esperança.
+                Ela representa a beleza do nosso amor e a promessa de um futuro maravilhoso juntos. Mal posso esperar
+                para compartilhar cada momento especial ao seu lado, construir memórias inesquecíveis e realizar nossos
+                sonhos em conjunto. Você é a pessoa mais especial na minha vida, e cada vez que olho para aquela foto,
+                tenho certeza de que estamos destinados a uma vida de amor e felicidade. Te amo profundamente, e mal
+                posso esperar para chamar você de minha esposa.
+              </li>
+            </p>
+          </h6>
+          </p>
+          <p>
+          <div>
+    </section>
+    
+    <section id="Seu presente">
+      <h2 align="center">Link<p>
+        </p>
+        <p style="font-size: 20px;">Entra depois que ver as fotos kkkkk</p>
+        <a href="Pergunta.html">Entre e responda!</a>
+      </h2>
+      </div>
+    </section>
+    <div>
+      <p>
+      <div>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        </head>
+
+        <body>
+
+
+          </section>
+          <section style="background-color: #f58f99bd" id="nossas fotos">
+            <h2 style="color: #f2f2f2;">Nossas fotos</h2>
+            <div class="site 0">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <style>
+                  .center {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 50%;
+                  }
+
+                  .imagem-transparente {
+                    background-color: transparent;
+                  }
+                </style>
+                <!-- Wrapper for slides -->
+
+                <div id="carouselExampleCaptions" class="carousel slide" style="color: #f58f9a;">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                      aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                      aria-label="Slide 2">
+                    </button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                      aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                      aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                      aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                      aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+                      aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"
+                      aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9"
+                      aria-label="Slide 10"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10"
+                      aria-label="Slide 11"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11"
+                      aria-label="Slide 12"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12"
+                      aria-label="Slide 13"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13"
+                      aria-label="Slide 14"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14"
+                      aria-label="Slide 15"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="15"
+                      aria-label="Slide 16"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="16"
+                      aria-label="Slide 17"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="17"
+                      aria-label="Slide 18"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="18"
+                      aria-label="Slide 19"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="19"
+                      aria-label="Slide 20"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="20"
+                      aria-label="Slide 21"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="21"
+                      aria-label="Slide 22"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="22"
+                      aria-label="Slide 23"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="23"
+                      aria-label="Slide 24"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="24"
+                      aria-label="Slide 25"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="25"
+                      aria-label="Slide 26"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="26"
+                      aria-label="Slide 27"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="27"
+                      aria-label="Slide 28"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="28"
+                      aria-label="Slide 29"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="29"
+                      aria-label="Slide 30"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="30"
+                      aria-label="Slide 31"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="31"
+                      aria-label="Slide 32"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="32"
+                      aria-label="Slide 33"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="33"
+                      aria-label="Slide 34"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="34"
+                      aria-label="Slide 35"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="35"
+                      aria-label="Slide 36"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="36"
+                      aria-label="Slide 37"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="37"
+                      aria-label="Slide 38"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="38"
+                      aria-label="Slide 39"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="39"
+                      aria-label="Slide 40"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="40"
+                      aria-label="Slide 41"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="41"
+                      aria-label="Slide 42"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="42"
+                      aria-label="Slide 43"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="43"
+                      aria-label="Slide 44"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="44"
+                      aria-label="Slide 45"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="45"
+                      aria-label="Slide 46"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="46"
+                      aria-label="Slide 47"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="47"
+                      aria-label="Slide 48"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="48"
+                      aria-label="Slide 49"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="49"
+                      aria-label="Slide 50"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="50"
+                      aria-label="Slide 51"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="51"
+                      aria-label="Slide 52"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="52"
+                      aria-label="Slide 53"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="53"
+                      aria-label="Slide 54"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="54"
+                      aria-label="Slide 55"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="55"
+                      aria-label="Slide 56"></button>
+
+
+
+
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="imagem/primeira foto.jpg" alt="Nossa primeira foto" width="" height="750" class="center"
+                        style="color: #f58f9a;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Nossa primera foto</h5>
+                        <p>Foi um dos melhores dias da minha vida.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/foto no 1 ani.jpg" width="800" height="800" alt="primeiro aniversário"
+                        class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Seu primeiro aniversário comigo</h5>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/gustavo é chato.jpg" alt="Testinha" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Também te amo</h5>
+                        <p>Sei que me ama muito</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/eu amo o gustavo.jpg" alt="sei que me ama" width="800" height="650"
+                        class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Viu como sei que você me ama kakakakakka</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/te vigiando.jpg" alt="testa 2" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Só tem testa nessa foto</h5>
+                        <p>Te amo</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/foto que ela gosta.jpg" alt="animo" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Ta com uma cara de animada você</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/linda de mais.jpg" alt="linda" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Uma princesa, ta doido</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/foto tremida.webp" alt="foto engraçada" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Essa foto ta muito engraçada </h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/detalhes.jpg" alt="detalhe" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Eu amo cada detalhe seu</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/negro drama.jpg" alt="negro drama" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Negro drama</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/sim.jpg" alt="sim" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Sim</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/rosto.jpg" alt="linda de mais" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Você é linda de mais </h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/pintou o cabelo.jpg" alt="gostei dessa" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Gostei dessa</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/foto no sofa de casa.jpg" alt="lindaaaaa" width="800" height="650"
+                        class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Amo essa foto</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/perfeita.jpg" alt="foto perfeita" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>a foto mais linda (entre todas) kakakkakaa</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="imagem/arlequina.jpg" alt="arlequina" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Muito arlequina você</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="imagem/olho torto.jpg" alt="anormal" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #000000;">Nosso relacionamento nao é normal kakakakakka</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="imagem/mais um aniversario.jpeg" alt="mais uma que gosto" width="800" height="650"
+                        class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Mais uma foto que eu gosto</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/jaco.jpg" alt="concorrente" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Ai chegou meu concorrente </h5>
+                        <p>Ama mais ele que eu</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/jacó 2.jpg" alt="concorrente" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>E acabou as fotos comigo</h5>
+                        <p>Agora é só foto com ele</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/chiquinhos.jpg" alt="amo" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Mas mesmo assim eu te amo</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/coração no rosto.jpg" alt="" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Essa foto ta muito boa kakakka</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/namorada linda.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Agora uma sessão de fotos suas </h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/maquiagem 1.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/maquiagem.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/maquiagem 2.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/maquiagem 3.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/maquiagem 4.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/maquiagem 5.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/maquiagem 9.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="imagem/formatura.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Nós na formatura</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/minha formatura.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Te agradeço por estar em todas as minhas conquistas<p>
+                            e por me ajudar nas dificuldades
+                          </p>
+                        </h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/indie.jpg" alt="" width="800" height="750" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>indie</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/sua mae.jpeg" alt="" width="800" height="650" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Amo de mais sua mãe</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/meu bigode grande.jpg" alt="" width="800" height="850" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Lembro que nesse dia eu falei que meu bigode estava grande</h5>
+                        <p>olha agora kakakakakkaka</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 1.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Agora, mais uma sessão de fotos sua</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 3.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 6.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 7.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 8.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 9.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 10.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 16.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/noiva 17.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/jaco 3.jpg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Apaixonada por um cachorro</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/GTA.webp" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>GTA</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/cebelão.jpg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Que cabelo lindoooo</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/com o nick.jpg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Amooo</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/batismo.jpg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Melhor escolha que fez</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/ja é da familia.jpg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Já é da familia né </h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/dormindo.jpeg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Pouco sono </h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/2023.jpg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Mais um ano com o amor da minha vida</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="imagem/jacó 4.jpg" alt="" width="800" height="700" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Mais apaixonada no cachorro que em mim</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="imagem/mais uma que gosto.jpg" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Você é genuinamente linda</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="imagem/bigode sujo.jpg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #000000;">Mas tambem come muito</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="imagem/beleza.jpeg" alt="" width="800" height="800" class="center">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>E eu te amo muito, e sempre vou te amar </h5>
+                        <p></p>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+        </body>
+
+        </html>
+
+        
